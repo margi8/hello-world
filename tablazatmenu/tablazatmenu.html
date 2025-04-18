@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Web-programozás-1 Előadás Házi feladat</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+	<header>
+        <h1 class="header">Web-programozás-1 Előadás Házi feladat</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="..\index.html">Főoldal</a></li>
+            <li><a href="..\bemutatkozas.html">Bemutatkozás</a></li>
+            <li><a href="..\kapcsolatok.html">Kapcsolatok</a></li>
+	    <li><a href="tablazatmenu\tablazatmenu.html" class="active">Táblázat menü</a></li>
+        </ul>
+    </nav>
+	 <aside>
+        <h1>Kapcsolatok</h1>
+    </aside>
+    <section>
+	<div class="tanulok-form">
+		<form onsubmit="event.preventDefault();onFormSubmit();">
+			<div>
+				<label>Teljes név*</label><label class="validation-error hide" id="fullNameValidationError">Kötelezően kitöltendő mező.</label>
+				<input type="text" name="fullName" id="fullName">
+			</div>
+			<div>
+				<label>Osztály*</label><label class="validation-error hide" id="osztalyValidationError">Csak egy karekter adhat meg.</label>
+				<input type="text" name="osztaly" id="osztaly">
+			</div>
+			<div>
+				<label>Osztályzat*</label><label class="validation-error hide" id="osztalyzatValidationError">Az osztályzatnak 1-5 -ig érdemjegyet lehet megadni.</label>
+				<input type="text" name="osztalyzat" id="osztalyzat">
+			</div>
+			<div>
+				<label>Tantárgy*</label><label class="validation-error hide" id="tantargyValidationError">Kötelezően kitöltendő mező.</label>
+				<input type="text" name="tantargy" id="tantargy">
+			</div>
+			<div  class="form-action-buttons">
+				<input type="submit" value="Submit">
+			</div>
+		</form>
+	</div>
+	<br/>
+	<div class = "tanulok-table">
+		<table class="list" id="tanulok">
+			<thead>
+				<tr>
+					<th>Teljes név <button onclick="sortTable(0)">Rendezés</button><input type="text" id="myInput" onkeyup="myFunction()" placeholder="Keresés"></th>
+					<th>Osztály <button onclick="sortTable(1)">Rendezés</button><input type="text" id="myInput2" onkeyup="myFunction2()" placeholder="Keresés"></th>
+					<th>Osztályzat <button onclick="sortTable(2)">Rendezés</button><input type="text" id="myInput3" onkeyup="myFunction3()" placeholder="Keresés"></th>
+					<th>Tantárgy <button onclick="sortTable(3)">Rendezés</button><input type="text" id="myInput4" onkeyup="myFunction4()" placeholder="Keresés"></th>
+					<th>Műveletek</th>
+				</tr>
+			</thead>
+			<tbody>
+				
+			</tbody>
+		</table>
+	</div>
+	</section>
+    <script src="script.js"></script>
+</body>
+</html>
