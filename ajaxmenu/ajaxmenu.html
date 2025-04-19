@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<html lang="hu">
+<head>
+  <meta charset="utf-8">
+  <script type="text/javascript" src="ajax.js"></script>
+  <link rel="stylesheet" href="../style.css">
+  <title>Web-programozás-1 Előadás Házi feladat</title>
+  <style>
+    input {
+      margin-bottom: 5px;
+    }
+    #statsDiv {
+      margin-top: 20px;
+      background-color: #eef;
+      padding: 10px;
+      border: 1px solid #88a;
+    }
+  </style>
+</head>
+<body>
+<header>
+        <h1 class="header">Web-programozás-1 Előadás Házi feladat</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="..\index.html">Főoldal</a></li>
+            <li><a href="..\bemutatkozas.html">Bemutatkozás</a></li>
+            <li><a href="..\kapcsolatok.html">Kapcsolatok</a></li>
+	    <li><a href="..\tablazatmenu\tablazatmenu.html">Táblázat menü</a></li>
+	    <li><a href="..\html5menu\html5menu.html">HTML5 menü</a></li>
+	    <li><a href="..\chartjsmenu\chartjsmenu.html">ChartJS menü</a></li>
+	    <li><a href="ajaxmenu.html" class="active">Ajax menü</a></li>
+        </ul>
+    </nav>
+	 <aside>
+        <h1>Ajax menü</h1>
+    </aside>
+    <section>
+	<div>
+
+  <div id="code"></div>
+  <div id="readDiv"></div>
+  <div id="statsDiv"></div>
+
+  <div id="createDiv">
+    <h1>Új rekord létrehozása (Create)</h1>
+    Name (max 100): <input id="name1" type="text"><br>
+    Height (max 100): <input id="height1" type="text"><br>
+    Weight (max 100): <input id="weight1" type="text"><br>
+    <button onclick="create();">Létrehozás</button><br>
+    <div id="createResult"></div>
+  </div>
+
+  <div id="updateDiv">
+    <h1>Rekord módosítása (Update)</h1>
+    ID: <input id="idUpd" type="text"><br>
+    <button onclick="getDataForId();">Adatok betöltése</button><br>
+    Name (max 100): <input id="name2" type="text"><br>
+    Height (max 100): <input id="height2" type="text"><br>
+    Weight (max 100): <input id="weight2" type="text"><br>
+    <button onclick="update();">Módosítás</button><br>
+    <div id="updateResult"></div>
+  </div>
+
+  <div id="deleteDiv">
+    <h1>Rekord törlése (Delete)</h1>
+    ID: <input id="idDel" type="text"><br>
+    <button onclick="deleteF();">Törlés</button><br>
+    <div id="deleteResult"></div>
+  </div>
+</div>
+<!section>
+</body>
+</html>
