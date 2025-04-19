@@ -7,7 +7,9 @@
 #div1 {width:400px;height:300px;padding:10px;border:1px solid #aaaaaa;}
 #test {width: 100px; height:100px; margin: 0px auto;}
 </style>
+
 <link rel="stylesheet" href="../style.css">
+
 <script>
 //bigLoop és Alert funkció scriptje
 function bigLoop(){
@@ -46,6 +48,7 @@ ev.target.appendChild(document.getElementById(data));
 
 </script>
 
+//
 <script type="text/javascript">
 function drawShape(){
 var canvas = document.getElementById('mycanvas'); // Get the canvas element using the DOM
@@ -75,7 +78,8 @@ alert('Your browser doesn\'t support Canvas.');
             <li><a href="bemutatkozas.html">Bemutatkozás</a></li>
             <li><a href="kapcsolatok.html">Kapcsolatok</a></li>
 	    <li><a href="..\tablazatmenu\tablazatmenu.html">Táblázat menü</a></li>
-	    <li><a href="html5menu\html5menu.html" class="active">HTML5 menü</a></li>
+	    <li><a href="html5menu.html" class="active">HTML5 menü</a></li>
+	    <li><a href="..\chartjsmenu\chartjsmenu.html">ChartJS menü</a></li>
         </ul>
     </nav>
  <aside>
@@ -83,7 +87,7 @@ alert('Your browser doesn\'t support Canvas.');
     </aside>
     <section>
 <div>
-<h1> Web storage </h>
+<h1> Web storage feladat </h>
 <h2> Session storage </h1>
 	<script type="text/javascript">
 		if( sessionStorage.hits )
@@ -95,7 +99,7 @@ alert('Your browser doesn\'t support Canvas.');
 	<p>Refresh the page to increase number of hits.</p>
 	<p>Close the window and open it again and check the result.</p>
 
-<h2> Local storage </h1>
+<h2> Local storage</h2>
 <script type="text/javascript">
 if( localStorage.hits )
 localStorage.hits = Number(localStorage.hits) +1;
@@ -106,12 +110,15 @@ document.write("Total Hits :" + localStorage.hits );
 
 <p>Refresh the page to increase number of hits.</p>
 <p>Close the window and open it again and check the result.</p>
-
-
+</br>
+</br>
+<h1>Web workers felada</h1>
+<h2>Big loop és Alert üzenet feladat</h2>
 <input type="button" onclick="bigLoop();" value="Big Loop">
 <input type="button" onclick="sayHello();" value="Say Hello">
-
-<h1>Getting server updates</h1>
+</br>
+</br>
+<h1>Getting server updates feladat</h1>
 <div id="result"></div>
 <script>
 if(typeof(EventSource) !== "undefined") {
@@ -122,8 +129,10 @@ document.getElementById("result").innerHTML += event.data + "<br>";
 } else
 document.getElementById("result").innerHTML = "Sorry, your browser does not support server-sent events...";
 </script>
-
-<p>Click the button to get your coordinates.</p>
+</br>
+</br>
+<h1>Geolocation API</h1>
+<p>Kattints a gobra, hogy megkapd a lokációs adatokat</p>
 <button onclick="getLocation()">Try It</button>
 <p id="demo"></p>
 <script>
@@ -138,9 +147,10 @@ function showPosition(position) {
 x.innerHTML = "Latitude: " + position.coords.latitude + "<br>Longitude: " + position.coords.longitude;
 }
 </script>
-
+</br>
+</br>
 <!--drag and drop funkció megjelenítése-->
-<h2>Drag the Neumann image into the rectangle:</h2>
+<h2>Drag and drop API feladat</h2>
 <!--Az ondragover: megengedjük, hogy ide lehessen más elemet dobni-->
 <!--Alapértelmezés szerint az adatok/elemek nem dobhatók be más elemekbe.-->
 <!--ondrop: megadjuk, hogy mi történjen eldobáskor-->
@@ -149,10 +159,12 @@ x.innerHTML = "Latitude: " + position.coords.latitude + "<br>Longitude: " + posi
 <!--draggable="true": Húzhatóvá tesszük az elemet-->
 <!--ondragstart="drag(event)": húzáskor meghívjuk a drag(event) függvényt-->
 <img id="drag1" src="nje.png" draggable="true" ondragstart="drag(event)" width="400" height="300">
-
 </br>
+</br>
+<h1>Canvas feladat</h1>
 <canvas id="mycanvas"></canvas>
 </br></br>
+<h1>SVG feladat</h1>
 <svg width="100" height="100">
 <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
 </svg>
@@ -174,6 +186,8 @@ x.innerHTML = "Latitude: " + position.coords.latitude + "<br>Longitude: " + posi
 </defs>
 <ellipse cx="100" cy="70" rx="85" ry="55" fill="url(#grad1)" />
 <text fill="#ffffff" font-size="45" font-family="Verdana" x="50" y="86">
+</br>
+</br>
 SVG
 </text>
 Sorry, your browser does not support inline SVG.
